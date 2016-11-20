@@ -1,0 +1,851 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{83C058F5-F382-4C68-A3CA-00E8C1139E57}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <AssemblyName>ConsoleApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>LMS45</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Build" />
+    <Reference Include="Microsoft.Build.Conversion.v4.0" />
+    <Reference Include="Microsoft.Build.Engine" />
+    <Reference Include="Microsoft.Build.Framework" />
+    <Reference Include="Microsoft.Build.Tasks.v4.0" />
+    <Reference Include="Microsoft.Build.Utilities.v4.0" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.JScript" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\..\..\..\Windows\assembly\GAC_MSIL\Microsoft.Office.Interop.Excel\14.0.0.0__71e9bce111e9429c\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Dmf, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Windows\assembly\GAC_MSIL\Microsoft.SqlServer.Dmf\13.0.0.0__89845dcd8080cc91\Microsoft.SqlServer.Dmf.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.Sdk.Sfc, Version=13.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Windows\assembly\GAC_MSIL\Microsoft.SqlServer.Management.Sdk.Sfc\13.0.0.0__89845dcd8080cc91\Microsoft.SqlServer.Management.Sdk.Sfc.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.Compatibility" />
+    <Reference Include="Microsoft.VisualBasic.Compatibility.Data" />
+    <Reference Include="Microsoft.VisualC" />
+    <Reference Include="Microsoft.VisualC.STLCLR" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Entity.Design" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Data.Services" />
+    <Reference Include="System.Data.Services.Client" />
+    <Reference Include="System.Data.Services.Design" />
+    <Reference Include="System.Data.SqlXml" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Device" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DataVisualization" />
+    <Reference Include="System.Web.DataVisualization.Design" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.DynamicData.Design" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Entity.Design" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Extensions.Design" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Web.RegularExpressions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Windows.Forms.DataVisualization.Design" />
+    <Reference Include="System.Windows.Input.Manipulations" />
+    <Reference Include="System.Windows.Presentation" />
+    <Reference Include="System.Workflow.Activities" />
+    <Reference Include="System.Workflow.ComponentModel" />
+    <Reference Include="System.Workflow.Runtime" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="LMS_DBDataSet.xsc">
+      <DependentUpon>LMS_DBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="LMS_DBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LMS_DBDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LMS_DBDataSet.xss">
+      <DependentUpon>LMS_DBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Settings.settings" />
+    <None Include="Student_DBDataSet.xsc">
+      <DependentUpon>Student_DBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Student_DBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Student_DBDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Student_DBDataSet.xss">
+      <DependentUpon>Student_DBDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BookIssueRecord_Staff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookIssueRecord_Staff.Designer.cs">
+      <DependentUpon>BookIssueRecord_Staff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BookIssueRecord_Staff1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookIssueRecord_Staff1.Designer.cs">
+      <DependentUpon>BookIssueRecord_Staff1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BookIssueRecord_Staff2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookIssueRecord_Staff2.Designer.cs">
+      <DependentUpon>BookIssueRecord_Staff2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BookReturnRecord_Staff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookReturnRecord_Staff.Designer.cs">
+      <DependentUpon>BookReturnRecord_Staff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BookReturnRecord_Staff1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookReturnRecord_Staff1.Designer.cs">
+      <DependentUpon>BookReturnRecord_Staff1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BookReturnRecord_Student.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookReturnRecord_Student.Designer.cs">
+      <DependentUpon>BookReturnRecord_Student.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BookReturnRecord_Student1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookReturnRecord_Student1.Designer.cs">
+      <DependentUpon>BookReturnRecord_Student1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAbout.Designer.cs">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBookEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBookEntry.Designer.cs">
+      <DependentUpon>frmBookEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBookIssue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBookIssue.Designer.cs">
+      <DependentUpon>frmBookIssue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBookIssueRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBookIssueRecord.Designer.cs">
+      <DependentUpon>frmBookIssueRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBookIssueRecord1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBookIssueRecord1.Designer.cs">
+      <DependentUpon>frmBookIssueRecord1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBookIssueRecord2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBookIssueRecord2.Designer.cs">
+      <DependentUpon>frmBookIssueRecord2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBookRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBookRecord.Designer.cs">
+      <DependentUpon>frmBookRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBookRecord1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBookRecord1.Designer.cs">
+      <DependentUpon>frmBookRecord1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBookRecord2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBookRecord2.Designer.cs">
+      <DependentUpon>frmBookRecord2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBookRecord3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBookRecord3.Designer.cs">
+      <DependentUpon>frmBookRecord3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBookReturn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBookReturn.Designer.cs">
+      <DependentUpon>frmBookReturn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBooksSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBooksSearch.Designer.cs">
+      <DependentUpon>frmBooksSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCards.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCards.Designer.cs">
+      <DependentUpon>frmCards.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChangePassword.Designer.cs">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCourse.Designer.cs">
+      <DependentUpon>frmCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDepartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDepartment.Designer.cs">
+      <DependentUpon>frmDepartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmJournalsAndMagzines.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmJournalsAndMagzines.Designer.cs">
+      <DependentUpon>frmJournalsAndMagzines.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmJournalsMagzinesRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmJournalsMagzinesRecord.Designer.cs">
+      <DependentUpon>frmJournalsMagzinesRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmJournalsMagzinesRecord1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmJournalsMagzinesRecord1.Designer.cs">
+      <DependentUpon>frmJournalsMagzinesRecord1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLoginDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLoginDetails.Designer.cs">
+      <DependentUpon>frmLoginDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNewsPaper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewsPaper.Designer.cs">
+      <DependentUpon>frmNewsPaper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNewsPaperRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewsPaperRecord.Designer.cs">
+      <DependentUpon>frmNewsPaperRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNewsPaperRecord1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewsPaperRecord1.Designer.cs">
+      <DependentUpon>frmNewsPaperRecord1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNoDues.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNoDues.Designer.cs">
+      <DependentUpon>frmNoDues.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPasswordRecovery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPasswordRecovery.Designer.cs">
+      <DependentUpon>frmPasswordRecovery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProject.Designer.cs">
+      <DependentUpon>frmProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProjectRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProjectRecord.Designer.cs">
+      <DependentUpon>frmProjectRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProjectRecord1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProjectRecord1.Designer.cs">
+      <DependentUpon>frmProjectRecord1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProjectReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProjectReport.Designer.cs">
+      <DependentUpon>frmProjectReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegistration.Designer.cs">
+      <DependentUpon>frmRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSplash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSplash.Designer.cs">
+      <DependentUpon>frmSplash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStaff.Designer.cs">
+      <DependentUpon>frmStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStaffCardRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStaffCardRecord.Designer.cs">
+      <DependentUpon>frmStaffCardRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStaffRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStaffRecord.Designer.cs">
+      <DependentUpon>frmStaffRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStaffRecord1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStaffRecord1.Designer.cs">
+      <DependentUpon>frmStaffRecord1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStaffRecord2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStaffRecord2.Designer.cs">
+      <DependentUpon>frmStaffRecord2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStaffsNoDuesRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStaffsNoDuesRecord.Designer.cs">
+      <DependentUpon>frmStaffsNoDuesRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStudent.Designer.cs">
+      <DependentUpon>frmStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStudentList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStudentList.Designer.cs">
+      <DependentUpon>frmStudentList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStudentListRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStudentListRecord.Designer.cs">
+      <DependentUpon>frmStudentListRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStudentListRecord1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStudentListRecord1.Designer.cs">
+      <DependentUpon>frmStudentListRecord1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStudentRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStudentRecord.Designer.cs">
+      <DependentUpon>frmStudentRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStudentRecord1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStudentRecord1.Designer.cs">
+      <DependentUpon>frmStudentRecord1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStudentRecord2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStudentRecord2.Designer.cs">
+      <DependentUpon>frmStudentRecord2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStudentRecord3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStudentRecord3.Designer.cs">
+      <DependentUpon>frmStudentRecord3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStudentsCardRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStudentsCardRecord.Designer.cs">
+      <DependentUpon>frmStudentsCardRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStudentsNoDuesdRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStudentsNoDuesdRecord.Designer.cs">
+      <DependentUpon>frmStudentsNoDuesdRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStudentsReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStudentsReport.Designer.cs">
+      <DependentUpon>frmStudentsReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSupplierRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSupplierRecord.Designer.cs">
+      <DependentUpon>frmSupplierRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSuppliers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSuppliers.Designer.cs">
+      <DependentUpon>frmSuppliers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSystemInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSystemInfo.Designer.cs">
+      <DependentUpon>frmSystemInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmYears.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmYears.Designer.cs">
+      <DependentUpon>frmYears.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LMS_DBDataSet.Designer.cs" />
+    <Compile Include="LMS_DBDataSet1.Designer.cs" />
+    <Compile Include="LMS_DBDataSet2.Designer.cs" />
+    <Compile Include="LMS_DBDataSet3.Designer.cs" />
+    <Compile Include="LMS_DBDataSet4.Designer.cs" />
+    <Compile Include="LMS_DBDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LMS_DBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Application.Designer.cs" />
+    <Compile Include="My Project\AssemblyInfo.cs" />
+    <Compile Include="My Project\Resources.Designer.cs" />
+    <Compile Include="My Project\Settings.Designer.cs" />
+    <Compile Include="MyNamespaceSupportForCSharp.cs" />
+    <Compile Include="rptProject.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptProject1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptProject2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptProject3.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptProject.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptStudentList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptStudentList1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptStudentList2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptStudentList3.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptStudentList.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Student_DBDataSet.Designer.cs" />
+    <Compile Include="Student_DBDataSet1.Designer.cs" />
+    <Compile Include="Student_DBDataSet2.Designer.cs" />
+    <Compile Include="Student_DBDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Student_DBDataSet.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BookIssueRecord_Staff.resx">
+      <DependentUpon>BookIssueRecord_Staff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookIssueRecord_Staff1.resx">
+      <DependentUpon>BookIssueRecord_Staff1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookIssueRecord_Staff2.resx">
+      <DependentUpon>BookIssueRecord_Staff2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookReturnRecord_Staff.resx">
+      <DependentUpon>BookReturnRecord_Staff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookReturnRecord_Staff1.resx">
+      <DependentUpon>BookReturnRecord_Staff1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookReturnRecord_Student.resx">
+      <DependentUpon>BookReturnRecord_Student.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookReturnRecord_Student1.resx">
+      <DependentUpon>BookReturnRecord_Student1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAbout.resx">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBookEntry.resx">
+      <DependentUpon>frmBookEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBookIssue.resx">
+      <DependentUpon>frmBookIssue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBookIssueRecord.resx">
+      <DependentUpon>frmBookIssueRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBookIssueRecord1.resx">
+      <DependentUpon>frmBookIssueRecord1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBookIssueRecord2.resx">
+      <DependentUpon>frmBookIssueRecord2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBookRecord.resx">
+      <DependentUpon>frmBookRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBookRecord1.resx">
+      <DependentUpon>frmBookRecord1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBookRecord2.resx">
+      <DependentUpon>frmBookRecord2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBookRecord3.resx">
+      <DependentUpon>frmBookRecord3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBookReturn.resx">
+      <DependentUpon>frmBookReturn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCards.resx">
+      <DependentUpon>frmCards.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChangePassword.resx">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCourse.resx">
+      <DependentUpon>frmCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDepartment.resx">
+      <DependentUpon>frmDepartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmJournalsAndMagzines.resx">
+      <DependentUpon>frmJournalsAndMagzines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmJournalsMagzinesRecord.resx">
+      <DependentUpon>frmJournalsMagzinesRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmJournalsMagzinesRecord1.resx">
+      <DependentUpon>frmJournalsMagzinesRecord1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoginDetails.resx">
+      <DependentUpon>frmLoginDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewsPaper.resx">
+      <DependentUpon>frmNewsPaper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewsPaperRecord.resx">
+      <DependentUpon>frmNewsPaperRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewsPaperRecord1.resx">
+      <DependentUpon>frmNewsPaperRecord1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNoDues.resx">
+      <DependentUpon>frmNoDues.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPasswordRecovery.resx">
+      <DependentUpon>frmPasswordRecovery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProject.resx">
+      <DependentUpon>frmProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProjectRecord.resx">
+      <DependentUpon>frmProjectRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProjectRecord1.resx">
+      <DependentUpon>frmProjectRecord1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProjectReport.resx">
+      <DependentUpon>frmProjectReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegistration.resx">
+      <DependentUpon>frmRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSplash.resx">
+      <DependentUpon>frmSplash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStaff.resx">
+      <DependentUpon>frmStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStaffCardRecord.resx">
+      <DependentUpon>frmStaffCardRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStaffRecord.resx">
+      <DependentUpon>frmStaffRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStaffRecord1.resx">
+      <DependentUpon>frmStaffRecord1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStaffRecord2.resx">
+      <DependentUpon>frmStaffRecord2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStaffsNoDuesRecord.resx">
+      <DependentUpon>frmStaffsNoDuesRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStudent.resx">
+      <DependentUpon>frmStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStudentList.resx">
+      <DependentUpon>frmStudentList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStudentListRecord.resx">
+      <DependentUpon>frmStudentListRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStudentListRecord1.resx">
+      <DependentUpon>frmStudentListRecord1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStudentRecord.resx">
+      <DependentUpon>frmStudentRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStudentRecord1.resx">
+      <DependentUpon>frmStudentRecord1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStudentRecord2.resx">
+      <DependentUpon>frmStudentRecord2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStudentRecord3.resx">
+      <DependentUpon>frmStudentRecord3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStudentsCardRecord.resx">
+      <DependentUpon>frmStudentsCardRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStudentsNoDuesdRecord.resx">
+      <DependentUpon>frmStudentsNoDuesdRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStudentsReport.resx">
+      <DependentUpon>frmStudentsReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSupplierRecord.resx">
+      <DependentUpon>frmSupplierRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSuppliers.resx">
+      <DependentUpon>frmSuppliers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSystemInfo.resx">
+      <DependentUpon>frmSystemInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmYears.resx">
+      <DependentUpon>frmYears.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx" />
+    <EmbeddedResource Include="rptProject.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptProject3.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptStudentList.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptStudentList3.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="My Project\Application.myapp" />
+    <Content Include="Resources\0088181331020_Color_Sky-Blue_SW_60X601.gif" />
+    <Content Include="Resources\0088181331020_Color_Sky-Blue_SW_60X602.gif" />
+    <Content Include="Resources\2.jpg" />
+    <Content Include="Resources\56928-256x256-courses-icon.png" />
+    <Content Include="Resources\8314929977_28fd740070_z.jpg" />
+    <Content Include="Resources\8314929977_28fd740070_z1.jpg" />
+    <Content Include="Resources\924988520653134968.png" />
+    <Content Include="Resources\9249885206531349681.png" />
+    <Content Include="Resources\admissions-icon.png" />
+    <Content Include="Resources\admissions-icon1.png" />
+    <Content Include="Resources\Background books entry1.jpg" />
+    <Content Include="Resources\Background books entry2.jpg" />
+    <Content Include="Resources\Background books entry3.jpg" />
+    <Content Include="Resources\Background books entry4.jpg" />
+    <Content Include="Resources\books.jpg" />
+    <Content Include="Resources\calc.png" />
+    <Content Include="Resources\calendar_year_icon.jpg" />
+    <Content Include="Resources\folder_home2.bmp" />
+    <Content Include="Resources\folder_home2.png" />
+    <Content Include="Resources\Graduate-Research-background-21.jpg" />
+    <Content Include="Resources\images.jpg" />
+    <Content Include="Resources\images1.jpg" />
+    <Content Include="Resources\images2.jpg" />
+    <Content Include="Resources\images3.jpg" />
+    <Content Include="Resources\images4.jpg" />
+    <Content Include="Resources\images5.jpg" />
+    <Content Include="Resources\images5.png" />
+    <Content Include="Resources\images51.png" />
+    <Content Include="Resources\library books desks bookshelf objects antique 2560x1600 wallpaper_wallpaperbeautiful_67.jpg" />
+    <Content Include="Resources\Log Details.png" />
+    <Content Include="Resources\login %282%291.jpg" />
+    <Content Include="Resources\logout.png" />
+    <Content Include="Resources\magazinesIcon.jpg" />
+    <Content Include="Resources\mainfrm.jpg" />
+    <Content Include="Resources\MS-Word-2-icon1.png" />
+    <Content Include="Resources\Notepad1.png" />
+    <Content Include="Resources\photo.jpg" />
+    <Content Include="Resources\Picture1.jpg" />
+    <Content Include="Resources\Picture1.png" />
+    <Content Include="Resources\registration_icon_up.png" />
+    <Content Include="Resources\registration_icon_up1.png" />
+    <Content Include="Resources\Researcher-resources-background21.jpg" />
+    <Content Include="Resources\stock-footage-all-is-written-in-the-books.jpg" />
+    <Content Include="Resources\stock-footage-library-table-full-of-books-isolated-on-white.jpg" />
+    <Content Include="Resources\supplierIcon2.png" />
+    <Content Include="Resources\system-information-icon.png" />
+    <Content Include="Resources\System-Security-Card-icon.png" />
+    <Content Include="Resources\task-manager1.png" />
+    <Content Include="Resources\textures-wallpapers-simple-and-beautifull-wood-texture-backgrounds.jpg" />
+    <Content Include="Resources\textures-wallpapers-simple-and-beautifull-wood-texture-backgrounds1.jpg" />
+    <Content Include="Resources\time_1920x1200.jpg" />
+    <Content Include="Resources\top_image.jpg" />
+    <Content Include="Resources\url.jpg" />
+    <Content Include="Resources\User-icon.png" />
+    <Content Include="Resources\Wordpad_icon_%28Windows_7%29.png" />
+    <Content Include="Resources\yellow-comment-bubbles-icon-culture-book2.jpg" />
+    <Content Include="Resources\yellow-comment-bubbles-icon-culture-book2.png" />
+    <Content Include="Resources\yellow-comment-bubbles-icon-culture-book21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include=".vs\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
+  <ProjectExtensions>
+    <VisualStudio AllowExistingFolder="true" />
+  </ProjectExtensions>
+</Project>
